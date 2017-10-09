@@ -1,10 +1,10 @@
 html {
-	height:100%;
+	height:960px;
 }
 
 body {
-	height: 100%;
- 	width: 100%;
+	height: 960px;
+ 	width: 960px;
 }
 
 button:focus {
@@ -34,16 +34,16 @@ button:hover {
 	line-height: 30px;
 }
 
-.container {
-	height:90%;
-}
-
 .child-container {
 	background: #000;
 	float: left;
-	height: 6vw;
-	width: 6vw;
-	border:0.2px solid white;
+	border:1px solid white;
+}
+
+/* The height/width will need to change, so give separate class */
+.child-container-default-size {
+	height: 58px;
+	width: 58px;
 }
 
 .highlighted {
