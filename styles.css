@@ -7,6 +7,14 @@ body {
  	width: 100%;
 }
 
+button:focus {
+	outline:0;
+}
+
+button:hover {
+	color:white;
+}
+
 .header {
 	height:10%;
 	width:100%;
@@ -16,10 +24,9 @@ body {
 }
 
 .header-button {
-
-	background-color: #5a3061;
+	background-color: #7a3786;
 	border:none;
-	color:white;
+	color:#dadada;
 	text-align:center;
 	display:inline-block;
 	font-size:16px;
