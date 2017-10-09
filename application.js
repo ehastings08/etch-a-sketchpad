@@ -2,6 +2,10 @@ $(document).ready(function() {
 	console.log('jQuery on');
 
 	function drawSquares(numSquares) {
+		// Need to clear the grid if running again
+		$('.child-container').remove();
+
+		// Draw grid
 		for (i=0; i<(numSquares*numSquares); i++) {
 			$('.container').append('<div class="child-container child-container-default-size" id="'+i+'"></div>');
 		}
