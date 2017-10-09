@@ -1,0 +1,16 @@
+body {
+	height: 100%;
+ 	width: 100%;
+}
+
+.container {
+	height:100%;
+}
+
+.child-container {
+	background: #000;
+	float: left;
+	height: 6vw;
+	width: 6vw;
+	border:0.2px solid white;
+}
