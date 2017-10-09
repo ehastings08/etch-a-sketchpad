@@ -6,4 +6,10 @@ $(document).ready(function() {
 	for (i=0; i<16*16; i++) {
 		$('.container').append('<div class="child-container" id="'+i+'"></div>');
 	}
+
+	// Create hover effect
+	$(".child-container").hover(function() {
+		$(this).addClass('highlighted');
+	});
+
 } );
