@@ -1,11 +1,14 @@
 $(document).ready(function() {
 	console.log('jQuery on');
 
-	/* Code below */
-	// Create divs
-	for (i=0; i<16*16; i++) {
-		$('.container').append('<div class="child-container child-container-default-size" id="'+i+'"></div>');
+	function drawSquares(numSquares) {
+		for (i=0; i<(numSquares*numSquares); i++) {
+			$('.container').append('<div class="child-container child-container-default-size" id="'+i+'"></div>');
+		}
 	}
+
+	// Start by drawing the default grid
+	drawSquares(16);
 
 	// Create hover effect
 	$(".child-container").hover(function() {
@@ -14,8 +17,8 @@ $(document).ready(function() {
 
 	// Upon button press, get user input and reset grid
 	$('#header-button').click(function() {
-		var squares = prompt('How many squares would you like?','16');
-		console.log(squares);
+		var numSquares = prompt('How many squares would you like?','16');
+		console.log(numSquares);
 	});
 
 } );
