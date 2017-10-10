@@ -1,5 +1,20 @@
 $(document).ready(function() {
-	console.log('jQuery on');
+
+	function updateSquareSize(numSquares) {
+		console.log('Running updateSquareSize');
+
+		var size = (960 / numSquares - 2).toString();
+
+		console.log('Calculated size is:')
+		console.log(size);
+
+		// Add height/width css here
+		$('.child-container').height(size);
+		$('.child-container').width(size);
+
+		console.log('Updated css height is:')
+		console.log($('.child-container').css('height'));
+	}
 
 	function drawSquares(numSquares) {
 		// Need to clear the grid if running again
@@ -7,8 +22,12 @@ $(document).ready(function() {
 
 		// Draw grid
 		for (i=0; i<(numSquares*numSquares); i++) {
-			$('.container').append('<div class="child-container child-container-default-size" id="'+i+'"></div>');
+			$('.container').append('<div class="child-container" id="'+i+'"></div>');
 		}
+		
+		// Update square size
+		updateSquareSize(numSquares);
+
 	}
 
 	// Start by drawing the default grid
@@ -20,9 +39,9 @@ $(document).ready(function() {
 	});
 
 	// Upon button press, get user input and reset grid
-	$('#header-button').click(function() {
+	$('#header-button').click(function() {;
 		var numSquares = prompt('How many squares would you like?','16');
-		console.log(numSquares);
+		drawSquares(numSquares);
 	});
 
 } );
