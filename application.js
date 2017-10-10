@@ -24,19 +24,30 @@ $(document).ready(function() {
 		for (i=0; i<(numSquares*numSquares); i++) {
 			$('.container').append('<div class="child-container" id="'+i+'"></div>');
 		}
-		
+
 		// Update square size
 		updateSquareSize(numSquares);
+		hoverSquares();
 
+	}
+
+	function hoverSquares() {
+		// Create hover effect
+		$(".child-container").hover(function() {
+			$(this).addClass('highlighted');
+		});
 	}
 
 	// Start by drawing the default grid
 	drawSquares(16);
 
+	/*
 	// Create hover effect
 	$(".child-container").hover(function() {
 		$(this).addClass('highlighted');
 	});
+	*/
+	hoverSquares();
 
 	// Upon button press, get user input and reset grid
 	$('#header-button').click(function() {;
